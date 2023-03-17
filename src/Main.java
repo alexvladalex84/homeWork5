@@ -37,11 +37,16 @@ public class Main {
 
         System.out.println("Задача 3");
 
-        int ear = 2025;
+        int ear = 2021;
         int highYear = ear % 4; // Високосный год 29 февраля раз в 4 года ,год делим на 4
         System.out.println("Остаток от деления "+highYear);
+        if (highYear ==0){
+            System.out.println(ear+" год является високосный");
+        }else {
+            System.out.println(ear+" год не является високосный");
+        }
 
-        switch (ear){
+        /* switch (ear){
             case 2020:
                 System.out.println("Високосный");
                 break;
@@ -58,29 +63,69 @@ public class Main {
                 System.out.println("Високосный");
                 break;
             default:
-                System.out.println("НЕ понятно");
+                System.out.println("НЕ понятно");*/
 
                 System.out.println("Задача 4");
 
-                int deliveryDistance = 19;
-                int daysForDelivery ;
+                int deliveryDistance = 100;
+                int daysForDelivery = 1;
+
+                if (deliveryDistance > 20){
+                    daysForDelivery ++;
+                }
+
+                if (deliveryDistance >60 ){
+                    daysForDelivery ++;
+                }
+
+                    System.out.println("Потребуется дней:"+ daysForDelivery);// оптимизировал код снизу
 
 
-                if (deliveryDistance < 20){
+
+
+              /*  if (deliveryDistance < 20){
                     System.out.println("потребуется дней: 1");
                 }else if (deliveryDistance > 20 && deliveryDistance <60){
                     System.out.println("Потребуется дней:2");
                 }else if (deliveryDistance >60 && deliveryDistance <= 100){
                     System.out.println("Потребуется дней:3");
                 }else{
-                    System.out.println("На данное расстояние дотавка не осуществляется");
-                }
+                    System.out.println("На данное расстояние дотавка не осуществляется");// код слишком громоский,код сверху меньше
+                }*/
 
                 System.out.println("Задача 5");
 
-               int monthNumber = 11;
+               int monthNumber = 4;
 
-                switch (monthNumber){
+               switch ( monthNumber){
+
+                   case 12:
+                   case 1:
+                   case 2:
+                       System.out.println("Зима");
+                       break;
+                   case 3:
+                   case 4:
+                   case 5:
+                       System.out.println("Весна");
+                       break;
+                   case 6:
+                   case 7:
+                   case 8:
+                       System.out.println("Лето");
+                       break;
+                   case 9:
+                   case 10:
+                   case 11:
+                       System.out.println("Осень");
+                       break;
+                   default:
+                       System.out.println("Номер месяца больше 12");
+
+
+
+
+              /*  switch (monthNumber){
                     case 1:
                         System.out.println("1 месяц в году январь,зимний месяц");
                         break;
@@ -119,7 +164,9 @@ public class Main {
                         break;
 
                     default:
-                        System.out.println("Номер месяца больше 12");
+                        System.out.println("Номер месяца больше 12");*/
+
+
 
 
                 }
@@ -137,4 +184,3 @@ public class Main {
 
 
     }
-}
